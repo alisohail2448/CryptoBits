@@ -3,21 +3,38 @@
 @tailwind utilities;
 
 :root {
-  @apply bg-primary text-primary
+  @apply bg-primary text-primary;
 }
 
 .rounded-div {
-  @apply bg-primary px-2 max-w-[1140px] w-full mx-auto
+  @apply bg-primary px-2 max-w-[1140px] w-full mx-auto;
 }
 .rounded-nav {
-  @apply bg-primary px-2 fixed z-20  w-full mx-auto
+  @apply fixed z-20 w-full px-2 mx-auto bg-primary;
 }
 .rounded-card {
-  @apply bg-secondary pl-4 pr-8 max-w-[1140px] w-full mx-auto rounded-2xl 
+  @apply bg-secondary pl-4 pr-8 max-w-[1140px] w-full mx-auto rounded-2xl;
 }
 .rounded-tab {
-  @apply bg-secondary px-8  mx-auto rounded-2xl 
+  @apply px-8 mx-auto bg-secondary rounded-2xl;
 }
+
+/* .rounded-card {
+  background-color: var(--color-bg-secondary);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding-left: 1rem;
+  padding-right: 2rem;
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 1rem;
+} */
+
+
 /* 
 .rounded-div {
   @apply border border-secondary rounded-2xl shadow-xl bg-primary px-2 max-w-[1140px] w-full mx-auto
@@ -32,6 +49,7 @@
   --color-bg-input: #4a5361;
   --color-bg-button: #81e6d9;
   --color-bg-grey: #f4f4f4;
+  --box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .light {
@@ -42,10 +60,13 @@
   --color-text-accent: #2b6cb0;
   --color-bg-input: #edf2f7;
   --color-bg-button: #00c0f0;
+  --box-shadow:  rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.homeImageDark{
-  background-image:linear-gradient(to bottom, rgba(64, 15, 80, 0), #111827e5), url('./images/h4.jpg');
+
+.homeImageDark {
+  background-image: linear-gradient(to bottom, rgba(64, 15, 80, 0), #111827e5),
+    url("./images/h4.jpg");
   /* background-image:  url('./images/h4.jpg'); */
 
   width: 100%;
@@ -54,8 +75,9 @@
   background-size: cover;
 }
 
-.homeImageLight{
-  background-image:linear-gradient(to bottom, rgba(64, 15, 80, 0), #ffffff30), url('./images/h4.jpg');
+.homeImageLight {
+  background-image: linear-gradient(to bottom, rgba(64, 15, 80, 0), #ffffff30),
+    url("./images/h4.jpg");
   /* background-image:  url('./images/h4.jpg'); */
 
   width: 100%;
@@ -64,31 +86,28 @@
   background-size: cover;
 }
 
-.backImageDark{
+/* .backImageDark{
   background-image: url('./images/meta2.jpg');
   width: 100%;
   height: 100vh;
   background-size: cover;
-}
-
+} */
+/* 
 .backImageLight{
   background-image:linear-gradient(to bottom, rgba(64, 15, 80, 0), #ffffff30), url('./images/meta3.jpg');
   width: 100%;
   height: 100vh;
   background-size: cover;
-}
+} */
 
-.textLinear{
-  background: linear-gradient(to right, #f321b4,
-  #ff6b08, #cf23cf, #eedd44);
+.textLinear {
+  background: linear-gradient(to right, #f321b4, #ff6b08, #cf23cf, #eedd44);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-
-.bitsMain{
-  background: linear-gradient(to right, #00c0f0,
-   #0d93e1);
+.bitsMain {
+  background: linear-gradient(to right, #00c0f0, #0d93e1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

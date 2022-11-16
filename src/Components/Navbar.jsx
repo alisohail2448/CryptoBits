@@ -5,6 +5,8 @@ import ThemeToggle from "./ThemeToggle";
 import cryptoBits from "../images/bits.png";
 import { UserAuth } from "../context/AuthContext";
 import { FaUserCircle } from "react-icons/fa";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -18,6 +20,17 @@ const Navbar = () => {
   const handleSignOut = async () => {
     try {
       await logOut();
+        toast('Sign Out Successfully', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          });
+       
       navigate("/");
     } catch (e) {
       console.log(e.message);
@@ -26,6 +39,19 @@ const Navbar = () => {
 
   return (
     <nav className="top-0 flex items-center justify-between h-20 font-bold border-b rounded-nav border-b-secondary">
+        <ToastContainer
+            position="top-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="colored"
+            toastStyle={{ backgroundColor: "var(--color-bg-secondary)", textColor:"var(--color-text-primary)", boxShadow:'none', marginTop:'20px' }} 
+          />
       <div className="flex items-center justify-between w-full h-20 font-bold md:px-20">
         <Link to="/" className="text-2xl">
           <div className="flex items-center justify-center">
